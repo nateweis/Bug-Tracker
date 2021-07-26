@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
-import {useDispatch} from '@reduxjs/toolkit'
+import {useDispatch} from 'react-redux'
 import {signIn} from '../../Controllers/Redux/authSlice'
+import './login.css'
 
 export default ()=>{
     const dispatch = useDispatch();
@@ -10,11 +11,11 @@ export default ()=>{
         password: ""
     })
 
-    handleChange = (e) => {
+    function handleChange(e){
         setFormInput({...formInput, [e.target.name]: [e.target.value]})
     }
 
-    handleSubmit = (e) => {
+    function handleSubmit(e){
         e.preventDefault()
         dispatch(signIn(formInput))
     }
