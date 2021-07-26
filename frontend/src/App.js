@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import Login from './Views/Login/login.js'
 
 
 
@@ -15,11 +16,9 @@ class App extends Component {
 
   render(){
     return (
-      <BrowserRouter>
-        <Switch>
-
-        </Switch>
-      </BrowserRouter>
+      <>
+        <Login />
+      </>
     );
   }
 }
