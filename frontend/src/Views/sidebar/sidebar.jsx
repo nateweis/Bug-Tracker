@@ -8,7 +8,7 @@ import './sidebar.css'
 export default ()=>{
     const dispatch = useDispatch()
     const {auth} = useSelector(state => state)
-    console.log(auth)
+    
     function SignOut(){
         dispatch(signOut())
     }
