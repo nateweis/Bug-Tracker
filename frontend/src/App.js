@@ -1,26 +1,18 @@
-import React, { Component } from 'react';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import React from 'react';
+import {useSelector} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom'
 import Login from './Views/Login/login.jsx';
+import Sidebar from './Views/sidebar/sidebar.jsx';
 
 
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state={
-      
-    }
-  }
-
-  
-
-  render(){
-    return (
-      <>
-        <Login />
-      </>
-    );
-  }
+function App(){
+  const {auth} = useSelector(state => state)
+  return (
+    <Router>
+      {!auth.LoggedIn? <Login /> : <Sidebar />}
+    </Router>
+  );
 }
 
 export default App;
