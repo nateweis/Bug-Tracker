@@ -9,7 +9,7 @@ export function retrieveBugs(){
         details: "Crashes after 3 seconds",
         steps: "Open Appliction and it will Crash",
         version: "V1.0",
-        priority: 2,
+        priority: 3,
         assigned: "Max Powers",
         creator: "Updawg",
         time: "15:23"
