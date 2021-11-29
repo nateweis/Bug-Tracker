@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Login from './Views/Login/login.jsx';
+import Login from './Views/Pages/Login/login.jsx';
 import Sidebar from './Views/sidebar/sidebar.jsx';
 import ViewBugPage from './Views/Pages/viewBugs.jsx';
 
